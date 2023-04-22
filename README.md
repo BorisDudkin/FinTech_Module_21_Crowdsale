@@ -71,7 +71,7 @@ The application consists of the following parts:<br/>
   The enhanced Kasei Coin Crowdsale and its deployment are demonstrated below:
 
   ![](Evaluation_Evidence/Optional.gif)<br/>
-  NOTE: we limit the time of the crowdsale to May 1st 2023 - Jul 1st 2023 and therefore we can not execute the initial sale (error message at the end of the video)
+  NOTE: we limit the time of the crowdsale to May 1st 2023 - Jul 1st 2023 and therefore we can not execute the sale during in the above demo (error message at the end of the video)
 
 > Getting started<br/>
 
