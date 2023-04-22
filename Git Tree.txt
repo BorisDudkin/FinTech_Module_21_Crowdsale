@@ -1,0 +1,4 @@
+* 	 (HEAD -> main, origin/main, origin/HEAD) gifs added
+* 	 evidence added, sol files completed
+* 	 initial readme.md
+* 	 Initial commit

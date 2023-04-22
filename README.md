@@ -59,6 +59,20 @@ The application consists of the following parts:<br/>
 
   ![](Evaluation_Evidence/Transact.gif)<br/>
 
+  5.  Optional: Extend the Crowdsale Contract by Using OpenZeppelin (a new sol file MyKaseiCoinCrowdsale.sol is created and added to the repository) </br>
+      In this section the crowdsale contract is extended to enhance its functionality with the following OpenZeppelin contracts:<br/>
+
+      - CappedCrowdsale: This contract allows you to cap the total amount of ether that may be raised during your crowdsale.<br/>
+
+      - TimedCrowdsale: This contract allows you to set a time limit for your crowdsale by adding an opening time and a closing time.<br/>
+
+      - RefundablePostDeliveryCrowdsale: Every time you launch a crowdsale, you set a goal amount of ether to raise. If the goal is not reached, it is common practice to refund your investors.<br/>
+
+  The enhanced Kasei Coin Crowdsale and its deployment are demonstrated below:
+
+  ![](Evaluation_Evidence/Optional.gif)<br/>
+  NOTE: we limit the time of the crowdsale to May 1st 2023 - Jul 1st 2023 and therefore we can not execute the initial sale (error message at the end of the video)
+
 > Getting started<br/>
 
 - To deploy the application, first clone the repository to your PC.<br/>
