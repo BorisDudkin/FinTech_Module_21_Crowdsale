@@ -1,6 +1,6 @@
 # Crowdsale
 
-### Joint Savings Account automates the creation of joint savings accounts. It is a Solidity smart contract that accepts two user addresses. These addresses control a joint savings account. Joint Savings Account Smart Contract uses ether management functions to implement a financial institution’s requirements for providing the the joint savings account specific features. These features consist of the ability to deposit and withdraw funds from the account.
+### Crowdsale application creates a fungible token that is ERC-20 compliant and that is minted by using a Crowdsale contract from the OpenZeppelin Solidity library.<br/>The crowdsale contract manages the entire crowdsale process, allowing users to send ether to the contract and in return receive KASE, or KaseiCoin tokens. The contract also mints the tokens automatically and distributes them to buyers in one transaction.
 
 ---
 
@@ -33,51 +33,36 @@ _Other Software_
 
 > Application summary<br/>
 
-The application consists of the following three sections:<br/>
+The application consists of the following parts:<br/>
 
-- Creating a JointSavings smart contract in Solidity:<br/>
+- Creating the KaseiCoin token contract:<br/>
+  ![KaseiCoin](Evaluation_Evidence/KaseiCoin.JPG)<br/>
+- Creating the KaseiCoin crowdsale contract<br/>
+  ![KaseiCoin](Evaluation_Evidence/KaseiCoinCrowdsale.JPG)<br/>
+- Creating the KaseiCoin deployer contract<br/>
+  ![KaseiCoin](Evaluation_Evidence/KaseiCoinCrowdsaleDeployer.JPG)<br/>
+- Deploying the crowdsale to a local blockchain by using Remix, MetaMask, and Ganache<br/>
 
-  - A set of variables defined inside the contract.<br/>
-  - The following functions are included:
+  1. In contracts select KaseiCoinCrowdsaleDeployer.sol and deploy specifying name, symbol and wallet that will be the beneficiary of the token sale. Click transact to deploy. The Deployer will create KaseiCoinCrowdsale and KaseiCoin contracts and launches them. Once launched, we need to link them in the Remix so that we can use their functions. <br/>
 
-    1.  Withdraw function;
-    2.  Deposit function;
-    3.  SetAccounts function;
-    4.  A Fallback function to ensure the contract can store ether that’s sent from outside the deposit function.<br/>
+  ![](Evaluation_Evidence/Deploy.gif)
 
-- Compiling and Deploying the Contract:<br/>
+  2. To link the Crowdsale, click the Crowdsale contract in the Deployment pane and copy the address. Then select the KaseiCoinCrowdsale contract from the contracts drop-down menu and paste the copied address in the At Address textbox to tell Remix where the contract is located. Click on At Address to make the contract available: <br/>
 
-  - Once the smart contract is written, we compile it and make sure there are no errors that occur in our code (the success is confirmed by the green check sign):<br/>
-    ![compile](Execution_Results/compiled.JPG)<br/>
-  - We choose the virtual environment and click the Deploy button to deploy our smart contract, and then confirm that it is successfully deployed:<br/>
-    ![compile](Execution_Results/deployed.JPG)<br/>
+  ![](Evaluation_Evidence/Crowdsale.gif)
 
-- Interacting with the Deployed Smart Contract:<br/>
+  3. Repeat the same steps to link the KaseiCoin contract:<br/>
 
-  - After deploying the contract the following functionalities were tested:<br/>
+  ![](Evaluation_Evidence/Coin.gif)
 
-    1. The setAccounts function used to define the authorized Ethereum address that will be able to withdraw funds from the contract:
-       ![setAccounts](Execution_Results/setAccounts.JPG)<br/>
+  4.  Testing the functionality of the crowdsale by using test accounts to buy new tokens and then checking the balances associated with those account. Two Ganashe test accounts are being used - one being an owner account that mints and distributes tokens and one account that is used to purchase tokens. Tests include checking the balance of the accounts used for purchase and for minting tokens as well as the total supply of tokens: <br/>
 
-    2. The deposit functionality of the smart contract was tested by sending<br/>
-       a) 1 ether as wei:<br/>
-       ![1ETH](Execution_Results/1ETH.JPG)<br/>
-       b) 10 ether as wei:<br/>
-       ![10ETH](Execution_Results/10ETH.JPG)<br/>
-       c) 5 ether:<br/>
-       ![5ETH](Execution_Results/5ETH.JPG)<br/>
-
-    3. The withdrawl functionality of the smart contract was tested by withdrawing<br/>
-       a) 5 ether from accountOne:<br/>
-       ![5ETHW](Execution_Results/withdr1.JPG)<br/>
-       b) 10 ether from accountTwo:<br/>
-       ![10ETHW](Execution_Results/withdr2.JPG)<br/>
-       NOTE: After each transaction, the contractBalance function was used to verify that the funds were withdrawn from the contract. Also, the lastToWithdraw and lastWithdrawAmount functions were used to verify that the address and amount were correct. Those checks can be seen on the above screenshots too.
+  ![](Evaluation_Evidence/Transact.gif)<br/>
 
 > Getting started<br/>
 
-- To deploy Joint Savings Account Smart Contract first clone the repository to your PC to obtain the joint_savings Solidity file containing the contract.<br/>
-- To deploy the contract open the cloned joint_savings.sol file in the Remix IDE and follow the instructions from the [Usage](#usage) section. <br/>
+- To deploy the application, first clone the repository to your PC.<br/>
+- To deploy the contracts open the cloned sol files in the Remix IDE and follow the instructions from the [Usage](#usage) section. <br/>
 
 ---
 
